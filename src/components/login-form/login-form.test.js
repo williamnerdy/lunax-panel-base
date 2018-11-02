@@ -49,6 +49,6 @@ describe('<LoginForm />', () => {
     passInput.simulate('change', passEvent);
 
     wrapper.simulate('submit', { preventDefault: () => {} });
-    expect(mock).toBeCalledWith(['testuser', 'testpass']);
+    expect(mock).toBeCalledWith('testuser', 'testpass');
   });
 });
