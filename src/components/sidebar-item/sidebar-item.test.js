@@ -1,6 +1,6 @@
 import React from 'react';
-import SidebarItem from './sidebar-item';
 import { shallow } from 'enzyme';
+import SidebarItem from './sidebar-item';
 
 describe('<SidebarItem />', () => {
   let wrapper, link, icon;
