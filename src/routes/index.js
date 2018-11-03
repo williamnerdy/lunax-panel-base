@@ -10,7 +10,7 @@ import LoginScreen from '~/screens/login';
 import HomeScreen from '~/screens/home';
 
 const Routes = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Switch>
       <PublicRoute path="/login" component={LoginScreen} />
       <RestrictedRoute exact path="/" component={HomeScreen} />
