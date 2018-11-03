@@ -22,10 +22,10 @@ const auth = (username, password) => {
 
 function LoginScreen() {
   return (
-    <div>
+    <>
       <h1>Login Screen</h1>
       <LoginForm onSubmit={auth} />
-    </div>
+    </>
   );
 }
 
