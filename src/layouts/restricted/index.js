@@ -1,5 +1,6 @@
 import React from 'react';
 import { Layout } from 'antd';
+import Navbar from '~/components/navbar';
 import Sidebar from '~/components/sidebar';
 
 const { Content } = Layout;
@@ -12,13 +13,16 @@ const sidebarItems = [
 const RestrictedLayout = ({ children }) => {
   return (
     <Layout style={{ height: '100vh' }}>
-      <Sidebar items={sidebarItems} />
-      <Layout style={{ marginLeft: 200 }}>
-        <Content
-          style={{ minHeight: '100vh', margin: '24px', overflow: 'initial' }}
-        >
-          {children}
-        </Content>
+      <Navbar />
+      <Layout>
+        <Sidebar items={sidebarItems} />
+        <Layout style={{ marginLeft: 200 }}>
+          <Content
+            style={{ minHeight: '100vh', margin: '24px', overflow: 'initial' }}
+          >
+            {children}
+          </Content>
+        </Layout>
       </Layout>
     </Layout>
   );
