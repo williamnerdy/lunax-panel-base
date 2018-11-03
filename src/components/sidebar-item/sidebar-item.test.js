@@ -11,8 +11,8 @@ describe('<SidebarItem />', () => {
         Teste
       </SidebarItem>
     );
-    link = wrapper.find('Link').at(0);
-    icon = wrapper.find('Icon').at(0);
+    link = wrapper.find('Link');
+    icon = wrapper.find('Icon');
   });
 
   it('shoud have "Teste" on text', () => {
@@ -20,7 +20,7 @@ describe('<SidebarItem />', () => {
   });
 
   it('shoud have a link', () => {
-    expect(wrapper.find('Link').length).toBe(1);
+    expect(link.length).toBe(1);
   });
 
   it('shoud have "/test" on url', () => {
@@ -28,7 +28,7 @@ describe('<SidebarItem />', () => {
   });
 
   it('shoud have a icon', () => {
-    expect(wrapper.find('Icon').length).toBe(1);
+    expect(icon.length).toBe(1);
   });
 
   it('shoud have "test" on icon', () => {
