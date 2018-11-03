@@ -18,15 +18,14 @@ const Sidebar = (props: Props) => {
         height: '100vh',
         position: 'fixed',
         left: 0,
-        background: '#2b2f3e'
+        background: '#fff'
       }}
     >
       <Menu
-        theme="dark"
         mode="inline"
         selectedKeys={[props.location.pathname]}
         defaultSelectedKeys={['/']}
-        style={{ background: '#2b2f3e' }}
+        style={{ height: '100%', borderRight: 0 }}
       >
         {props.items.map(item => (
           <SidebarItem key={item.url} url={item.url} icon={item.icon}>
