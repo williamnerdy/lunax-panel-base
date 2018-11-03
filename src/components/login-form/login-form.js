@@ -1,6 +1,8 @@
 // @flow
 import React, { Component } from 'react';
-import { Button } from 'antd';
+import { Form, Icon, Input, Button } from 'antd';
+
+const FormItem = Form.Item;
 
 type Props = {
   onSubmit: Function
@@ -35,39 +37,44 @@ class LoginForm extends Component<Props, State> {
   }
 
   render() {
+    const { getFieldDecorator } = this.props.form;
     return (
-      <form onSubmit={this.handleSubmit}>
-        <div>
-          <input
-            id="username"
-            type="text"
-            name="username"
-            placeholder="username"
-            value={this.state.username}
-            onChange={this.handleChange}
-            autoCorrect="off"
-            required
-          />
-        </div>
-        <div>
-          <input
-            id="password"
-            type="password"
-            name="password"
-            placeholder="password"
-            value={this.state.password}
-            onChange={this.handleChange}
-            autoComplete="off"
-            autoCorrect="off"
-            required
-          />
-        </div>
-        <div>
-          <Button>Entrar</Button>
-        </div>
-      </form>
+      <Form onSubmit={this.handleSubmit} className="login-form">
+        <FormItem>
+          {getFieldDecorator('username', {
+            rules: [{ required: true, message: 'Por favor, digite o usuário!' }]
+          })(
+            <Input
+              id="user"
+              prefix={<Icon type="user" />}
+              placeholder="Usuário"
+            />
+          )}
+        </FormItem>
+        <FormItem>
+          {getFieldDecorator('password', {
+            rules: [{ required: true, message: 'Por favor, digite a senha!' }]
+          })(
+            <Input
+              id="pass"
+              prefix={<Icon type="lock" />}
+              type="password"
+              placeholder="Senha"
+            />
+          )}
+        </FormItem>
+        <FormItem>
+          <Button
+            type="primary"
+            htmlType="submit"
+            className="login-form-button"
+          >
+            Entrar
+          </Button>
+        </FormItem>
+      </Form>
     );
   }
 }
 
-export default LoginForm;
+export default Form.create()(LoginForm);
