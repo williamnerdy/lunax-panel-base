@@ -3,13 +3,14 @@ import { withRouter } from 'react-router-dom';
 import LoginForm from '~/components/login-form';
 import api from '~/services/api';
 import { login } from '~/services/auth';
-import { API_DATA, APP_NAME } from '~/settings';
+import { APP_NAME } from '~/settings';
+import { AUTH_URL } from '~/api-url';
 import Logo from '~/images/logo.png';
 
 const LoginScreen = props => {
   const auth = (username, password) => {
     api
-      .post(API_DATA.auth, { username, password })
+      .post(AUTH_URL, { username, password })
       .then(({ data }) => {
         if (data.key) {
           login(data.key);

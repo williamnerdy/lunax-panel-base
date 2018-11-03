@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Loading from '~/components/loading';
 import api from '~/services/api';
-import { API_DATA } from '~/settings';
+import { SETTINGS_URL } from '~/api-url';
 
 type State = {
   loaded: boolean
@@ -14,7 +14,7 @@ class SettingsScreen extends Component<State> {
 
   componentDidMount() {
     api
-      .get(API_DATA.settings)
+      .get(SETTINGS_URL)
       .then(() => {
         this.setState({ loaded: true });
       })

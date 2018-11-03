@@ -6,9 +6,3 @@ export const SCREENS = [
   { icon: 'home', name: 'Home', url: '/' },
   { icon: 'setting', name: 'Settings', url: '/settings' }
 ];
-
-export const API_DATA = {
-  auth: '/auth-url/',
-  home: '/home-url/',
-  settings: '/settings-url/'
-};
