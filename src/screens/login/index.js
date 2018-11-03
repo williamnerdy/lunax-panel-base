@@ -9,10 +9,12 @@ import Logo from '~/images/logo.png';
 const auth = (username, password) => {
   api
     .post(URL_AUTH, { username, password })
-    .then(res => {
-      if (res.token) {
-        login(res.token);
+    .then(({ data }) => {
+      if (data.key) {
+        login(data.key);
         this.props.history.push('/');
+      } else {
+        alert('Error');
       }
     })
     .catch(error => {
