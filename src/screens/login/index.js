@@ -3,7 +3,8 @@ import { withRouter } from 'react-router-dom';
 import LoginForm from '~/components/login-form';
 import api from '~/services/api';
 import { login } from '~/services/auth';
-import { URL_AUTH } from '~/settings';
+import { URL_AUTH, APP_NAME } from '~/settings';
+import Logo from '~/images/logo.png';
 
 const auth = (username, password) => {
   api
@@ -23,7 +24,7 @@ const auth = (username, password) => {
 function LoginScreen() {
   return (
     <>
-      <h1>Login Screen</h1>
+      <img style={{ marginBottom: '15px' }} src={Logo} alt={APP_NAME} />
       <LoginForm onSubmit={auth} />
     </>
   );
