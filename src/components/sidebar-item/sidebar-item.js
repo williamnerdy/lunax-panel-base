@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Icon } from 'antd';
+import { Menu, Icon } from 'antd';
 
 type Props = {
   children: string,
@@ -9,14 +9,14 @@ type Props = {
   icon: string
 };
 
-const SidebarItem = (props: Props) => {
+const SidebarItem = ({ url, icon, children, ...props }: Props) => {
   return (
-    <li>
-      <Link to={props.url}>
-        <Icon type={props.icon} />
-        <span>{props.children}</span>
+    <Menu.Item {...props}>
+      <Link to={url}>
+        <Icon type={icon} />
+        <span className="nav-text">{children}</span>
       </Link>
-    </li>
+    </Menu.Item>
   );
 };
 
