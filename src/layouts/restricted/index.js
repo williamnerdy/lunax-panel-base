@@ -17,9 +17,7 @@ const RestrictedLayout = ({ children }) => {
       <Layout>
         <Sidebar items={sidebarItems} />
         <Layout style={{ marginLeft: 200 }}>
-          <Content
-            style={{ minHeight: '100vh', margin: '24px', overflow: 'initial' }}
-          >
+          <Content style={{ margin: '24px', overflow: 'initial' }}>
             {children}
           </Content>
         </Layout>
