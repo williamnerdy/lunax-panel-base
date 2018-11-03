@@ -23,9 +23,4 @@ describe('<LoginForm />', () => {
   it('should have a Button', () => {
     expect(wrapper.find('Button').length).toBe(1);
   });
-
-  it('should call function on submit form', () => {
-    wrapper.simulate('submit', { preventDefault: () => {} });
-    expect(mock).toBeCalled();
-  });
 });
