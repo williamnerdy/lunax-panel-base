@@ -4,7 +4,10 @@ import Sidebar from '~/components/sidebar';
 
 const { Content } = Layout;
 
-const sidebarItems = [{ icon: 'home', name: 'Home', url: '/' }];
+const sidebarItems = [
+  { icon: 'home', name: 'Home', url: '/' },
+  { icon: 'setting', name: 'Settings', url: '/settings' }
+];
 
 const RestrictedLayout = ({ children }) => {
   return (
