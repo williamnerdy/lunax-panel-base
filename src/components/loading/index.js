@@ -1,5 +1,2 @@
-import React from 'react';
-
-const Loading = () => <h1>Loading...</h1>;
-
+import Loading from './loading';
 export default Loading;
