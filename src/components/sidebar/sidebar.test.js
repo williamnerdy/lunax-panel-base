@@ -23,11 +23,7 @@ describe('<Sidebar />', () => {
   });
 
   it('shoud render correctly', () => {
-    wrapper = shallow(
-      <MemoryRouter>
-        <Sidebar items={items} />
-      </MemoryRouter>
-    );
+    wrapper = shallow(<Sidebar items={items} />);
     expect(wrapper).toMatchSnapshot();
   });
 
