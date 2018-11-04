@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Sidebar /> shoud render correctly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MemoryRouter>
+    <withRouter(Sidebar)
+      items={
+        Array [
+          Object {
+            "icon": "test-icon-1",
+            "name": "test name 1",
+            "url": "/test-url-1",
+          },
+          Object {
+            "icon": "test-icon-2",
+            "name": "test name 2",
+            "url": "/test-url-2",
+          },
+          Object {
+            "icon": "test-icon-3",
+            "name": "test name 3",
+            "url": "/test-url-3",
+          },
+          Object {
+            "icon": "test-icon-4",
+            "name": "test name 4",
+            "url": "/test-url-4",
+          },
+        ]
+      }
+    />
+  </MemoryRouter>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": <withRouter(Sidebar)
+        items={
+          Array [
+            Object {
+              "icon": "test-icon-1",
+              "name": "test name 1",
+              "url": "/test-url-1",
+            },
+            Object {
+              "icon": "test-icon-2",
+              "name": "test name 2",
+              "url": "/test-url-2",
+            },
+            Object {
+              "icon": "test-icon-3",
+              "name": "test name 3",
+              "url": "/test-url-3",
+            },
+            Object {
+              "icon": "test-icon-4",
+              "name": "test name 4",
+              "url": "/test-url-4",
+            },
+          ]
+        }
+      />,
+      "history": Object {
+        "action": "POP",
+        "block": [Function],
+        "canGo": [Function],
+        "createHref": [Function],
+        "entries": Array [
+          Object {
+            "hash": "",
+            "key": "srdwcs",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+        ],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "index": 0,
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "srdwcs",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      },
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "items": Array [
+          Object {
+            "icon": "test-icon-1",
+            "name": "test name 1",
+            "url": "/test-url-1",
+          },
+          Object {
+            "icon": "test-icon-2",
+            "name": "test name 2",
+            "url": "/test-url-2",
+          },
+          Object {
+            "icon": "test-icon-3",
+            "name": "test name 3",
+            "url": "/test-url-3",
+          },
+          Object {
+            "icon": "test-icon-4",
+            "name": "test name 4",
+            "url": "/test-url-4",
+          },
+        ],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": <withRouter(Sidebar)
+          items={
+            Array [
+              Object {
+                "icon": "test-icon-1",
+                "name": "test name 1",
+                "url": "/test-url-1",
+              },
+              Object {
+                "icon": "test-icon-2",
+                "name": "test name 2",
+                "url": "/test-url-2",
+              },
+              Object {
+                "icon": "test-icon-3",
+                "name": "test name 3",
+                "url": "/test-url-3",
+              },
+              Object {
+                "icon": "test-icon-4",
+                "name": "test name 4",
+                "url": "/test-url-4",
+              },
+            ]
+          }
+        />,
+        "history": Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "srdwcs",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "srdwcs",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        },
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "items": Array [
+            Object {
+              "icon": "test-icon-1",
+              "name": "test name 1",
+              "url": "/test-url-1",
+            },
+            Object {
+              "icon": "test-icon-2",
+              "name": "test name 2",
+              "url": "/test-url-2",
+            },
+            Object {
+              "icon": "test-icon-3",
+              "name": "test name 3",
+              "url": "/test-url-3",
+            },
+            Object {
+              "icon": "test-icon-4",
+              "name": "test name 4",
+              "url": "/test-url-4",
+            },
+          ],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;

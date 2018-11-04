@@ -1,6 +1,6 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import Sidebar from './sidebar';
 import SidebarItem from '../sidebar-item';
 
@@ -20,6 +20,15 @@ describe('<Sidebar />', () => {
         <Sidebar items={items} />
       </MemoryRouter>
     );
+  });
+
+  it('shoud render correctly', () => {
+    wrapper = shallow(
+      <MemoryRouter>
+        <Sidebar items={items} />
+      </MemoryRouter>
+    );
+    expect(wrapper).toMatchSnapshot();
   });
 
   it('shoud find a ul', () => {
