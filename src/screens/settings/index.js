@@ -16,11 +16,14 @@ class SettingsScreen extends Component<State> {
     api
       .get(SETTINGS_URL)
       .then(() => {
-        this.setState({ loaded: true });
+        // code...
       })
       .catch(e => {
         console.error(e);
         alert('Error on load data!');
+      })
+      .finally(() => {
+        this.setState({ loaded: true });
       });
   }
 

@@ -16,11 +16,14 @@ class HomeScreen extends Component<State> {
     api
       .get(HOME_URL)
       .then(() => {
-        this.setState({ loaded: true });
+        // code...
       })
       .catch(e => {
         console.error(e);
         alert('Error on load data!');
+      })
+      .finally(() => {
+        this.setState({ loaded: true });
       });
   }
 
