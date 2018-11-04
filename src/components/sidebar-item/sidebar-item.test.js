@@ -8,15 +8,19 @@ describe('<SidebarItem />', () => {
   beforeEach(() => {
     wrapper = shallow(
       <SidebarItem url="/test" icon="test">
-        Teste
+        Test
       </SidebarItem>
     );
     link = wrapper.find('Link');
     icon = wrapper.find('Icon');
   });
 
-  it('shoud have "Teste" on text', () => {
-    expect(wrapper.contains('Teste')).toBe(true);
+  it('shoud render correctly', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('shoud have "Test" on text', () => {
+    expect(wrapper.contains('Test')).toBe(true);
   });
 
   it('shoud have a link', () => {
