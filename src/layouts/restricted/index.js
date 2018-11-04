@@ -13,7 +13,7 @@ const RestrictedLayout = ({ children }) => {
       <Layout>
         <Sidebar items={SCREENS} />
         <Layout style={{ marginLeft: 200 }}>
-          <Content style={{ margin: '24px', overflow: 'initial' }}>
+          <Content style={{ margin: '24px', overflow: 'initial', position: 'relative' }}>
             {children}
           </Content>
         </Layout>
