@@ -9,6 +9,7 @@ import RestrictedRoute from './restricted';
 import LoginScreen from '~/screens/login';
 import HomeScreen from '~/screens/home';
 import SettingsScreen from '~/screens/settings';
+import ImagesScreen from '~/screens/images';
 
 const Routes = () => (
   <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -16,6 +17,7 @@ const Routes = () => (
       <PublicRoute path="/login" component={LoginScreen} />
       <RestrictedRoute exact path="/" component={HomeScreen} />
       <RestrictedRoute path="/settings" component={SettingsScreen} />
+      <RestrictedRoute path="/images" component={ImagesScreen} />
     </Switch>
   </BrowserRouter>
 );

@@ -1,3 +1,7 @@
-export const AUTH_URL = '/auth-url/';
+export const API_URL = 'https://example.com';
+export const AUTH_URL = '/login-url/';
 export const HOME_URL = '/home-url/';
 export const SETTINGS_URL = '/settings-url/';
+export const IMAGES_URL = '/images-url/';
+
+export default API_URL;
