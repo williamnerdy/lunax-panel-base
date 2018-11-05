@@ -138,7 +138,17 @@ class DataTableScreen extends Component<State> {
         return;
       }
 
-      console.log('Received values of form: ', values);
+      this.setState(prevState => ({
+        data: [
+          ...prevState.data,
+          {
+            key: prevState.data.length + 1,
+            name: values.name,
+            age: values.age,
+            address: values.address
+          }
+        ]
+      }));
       form.resetFields();
       this.setState({ visible: false });
     });
@@ -154,7 +164,7 @@ class DataTableScreen extends Component<State> {
         {this.state.loaded ? (
           <div>
             <Button type="primary" onClick={this.showModal}>
-              New Collection
+              New
             </Button>
             <ModalForm
               wrappedComponentRef={this.saveFormRef}

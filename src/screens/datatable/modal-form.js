@@ -1,5 +1,6 @@
 import React from 'react';
-import { Modal, Form, Input, Radio } from 'antd';
+import { Modal, Form, Input } from 'antd';
+import TextArea from 'antd/lib/input/TextArea';
 
 const FormItem = Form.Item;
 
@@ -17,28 +18,34 @@ class ModalForm extends React.Component {
         onOk={onCreate}
       >
         <Form layout="vertical">
-          <FormItem label="Title">
-            {getFieldDecorator('title', {
+          <FormItem label="Name">
+            {getFieldDecorator('name', {
               rules: [
                 {
                   required: true,
-                  message: 'Please input the title of collection!'
+                  message: 'Please input the name!'
                 }
               ]
             })(<Input />)}
           </FormItem>
-          <FormItem label="Description">
-            {getFieldDecorator('description')(<Input type="textarea" />)}
+          <FormItem label="Age">
+            {getFieldDecorator('age', {
+              rules: [
+                {
+                  required: true,
+                  message: 'Please input the age!'
+                }
+              ]
+            })(<Input />)}
           </FormItem>
-          <FormItem className="collection-create-form_last-form-item">
-            {getFieldDecorator('modifier', {
-              initialValue: 'public'
-            })(
-              <Radio.Group>
-                <Radio value="public">Public</Radio>
-                <Radio value="private">Private</Radio>
-              </Radio.Group>
-            )}
+          <FormItem label="Address">
+            {getFieldDecorator('address', {
+              rules: [
+                {
+                  message: 'Please input the address!'
+                }
+              ]
+            })(<TextArea />)}
           </FormItem>
         </Form>
       </Modal>
