@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Upload, Icon, Modal } from 'antd';
 import Loading from '~/components/loading';
 import api from '~/services/api';
-import { IMAGES_URL } from '~/api-url';
+import { API_URL, IMAGES_URL } from '~/api-url';
 
 type State = {
   loaded: boolean,
@@ -66,7 +66,7 @@ class ImagesScreen extends Component<State> {
         {this.state.loaded ? (
           <div className="clearfix">
             <Upload
-              action="//jsonplaceholder.typicode.com/posts/"
+              action={`${API_URL}${IMAGES_URL}`}
               listType="picture-card"
               fileList={fileList}
               onPreview={this.handlePreview}
