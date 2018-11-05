@@ -10,6 +10,7 @@ import LoginScreen from '~/screens/login';
 import HomeScreen from '~/screens/home';
 import SettingsScreen from '~/screens/settings';
 import ImagesScreen from '~/screens/images';
+import DataTableScreen from '~/screens/datatable';
 
 const Routes = () => (
   <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -18,6 +19,7 @@ const Routes = () => (
       <RestrictedRoute exact path="/" component={HomeScreen} />
       <RestrictedRoute path="/settings" component={SettingsScreen} />
       <RestrictedRoute path="/images" component={ImagesScreen} />
+      <RestrictedRoute path="/datatable" component={DataTableScreen} />
     </Switch>
   </BrowserRouter>
 );
